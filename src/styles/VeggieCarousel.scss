@@ -1,0 +1,23 @@
+.carousel-section {
+  padding: 2rem;
+  h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .swiper {
+    padding-bottom: 2rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #f8b400;
+    transition: 0.3s ease;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    color: #fff;
+  }
+}
