@@ -1,8 +1,8 @@
 .carousel-section {
-  padding: 2rem;
+  padding: 0rem 5rem;
 }
 .carousel-section h2 {
-  color: #fff;
+  color: #2d2d2d;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -11,10 +11,39 @@
 }
 .carousel-section .swiper-button-next,
 .carousel-section .swiper-button-prev {
-  color: #f8b400;
+  top: 55%;
+  transform: translateY(-55%);
+  color: #2d2d2d;
   transition: 0.3s ease;
 }
 .carousel-section .swiper-button-next:hover,
 .carousel-section .swiper-button-prev:hover {
-  color: #fff;
+  color: #f8b40e;
+}
+
+@media (max-width: 768px) {
+  .carousel-section,
+  .trending-carousel {
+    padding: 0 1rem;
+  }
+  .carousel-section h2,
+  .trending-carousel h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 1rem 0;
+  }
+  .carousel-section .swiper,
+  .trending-carousel .swiper {
+    padding-bottom: 1rem;
+  }
+  .carousel-section .swiper-slide,
+  .trending-carousel .swiper-slide {
+    width: 140px !important;
+  }
+  .carousel-section .swiper-button-next,
+  .carousel-section .swiper-button-prev,
+  .trending-carousel .swiper-button-next,
+  .trending-carousel .swiper-button-prev {
+    display: none;
+  }
 }/*# sourceMappingURL=VeggieCarousel.css.map */

@@ -1,32 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/SearchBar.scss";
+import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState("");
+const SearchBar = ({ query }) => {
+  const navigate = useNavigate();
 
-  const handleSearch = () => {
-    if (query.trim() !== "") {
-      onSearch(query);
-    }
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      handleSearch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const term = e.target.elements.search.value.trim();
+    if (term) {
+      navigate(`/search/${term}`);
     }
   };
 
   return (
-    <div className="search-bar">
-      <input
-        type="text"
-        placeholder="Search recipes..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-      />
-      <button onClick={handleSearch}>Search</button>
-    </div>
+    <form className="search-bar-wrapper" onSubmit={handleSubmit}>
+      <div className="search-input-container">
+        <FaSearch className="search-icon" />
+        <input
+          type="text"
+          name="search"
+          defaultValue={query}
+          placeholder="What’s on your craving list?"
+          autoComplete="off"
+        />
+      </div>
+    </form>
   );
 };
 

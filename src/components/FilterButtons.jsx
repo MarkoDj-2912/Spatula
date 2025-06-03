@@ -8,17 +8,18 @@ import {
   faBurger,
   faBowlFood,
   faFish,
-  faBreadSlice,
+  faMortarPestle,
+  faPepperHot,
 } from "@fortawesome/free-solid-svg-icons";
 
-// Lista filtera sa nazivima i ikonama
+// filters- names and icons
 const filters = [
-  { label: "Breakfast", icon: faBacon },
   { label: "Italian", icon: faPizzaSlice },
   { label: "American", icon: faBurger },
   { label: "Thai", icon: faBowlFood },
   { label: "Japanese", icon: faFish },
-  { label: "Sandwich", icon: faBreadSlice },
+  { label: "Mexican", icon: faPepperHot },
+  { label: "Indian", icon: faMortarPestle },
 ];
 
 const FilterButtons = () => {

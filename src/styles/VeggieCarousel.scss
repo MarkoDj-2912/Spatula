@@ -1,7 +1,8 @@
 .carousel-section {
-  padding: 2rem;
+  padding: 0rem 5rem;
+
   h2 {
-    color: #fff;
+    color: #2d2d2d;
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
@@ -12,12 +13,39 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: #f8b400;
+    top: 55%;
+    transform: translateY(-55%);
+    color: #2d2d2d;
     transition: 0.3s ease;
   }
 
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
-    color: #fff;
+    color: #f8b40e;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-section,
+  .trending-carousel {
+    padding: 0 1rem;
+
+    h2 {
+      font-size: 1.2rem;
+      text-align: left;
+      margin: 1rem 0;
+    }
+
+    .swiper {
+      padding-bottom: 1rem;
+    }
+
+    .swiper-slide {
+      width: 140px !important;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
   }
 }

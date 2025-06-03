@@ -1,0 +1,70 @@
+.recipe-detail {
+  display: flex;
+  max-width: 1100px;
+  margin: 3rem auto;
+  gap: 2rem;
+  padding: 0 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.recipe-detail .image-section {
+  flex: 1;
+}
+.recipe-detail .image-section img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.recipe-detail .image-section h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+.recipe-detail .content-section {
+  flex: 1.2;
+}
+.recipe-detail .content-section .toggle-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.recipe-detail .content-section .toggle-buttons button {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #333;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.recipe-detail .content-section .toggle-buttons button.active {
+  background: #333;
+  color: #fff;
+}
+.recipe-detail .content-section .toggle-buttons button:hover {
+  background: #f44336;
+  color: #fff;
+  border-color: #f44336;
+}
+.recipe-detail .content-section .text-content {
+  line-height: 1.6;
+  color: #333;
+}
+.recipe-detail .content-section .text-content ul {
+  padding-left: 1.5rem;
+}
+.recipe-detail .content-section .text-content ul li {
+  margin-bottom: 0.5rem;
+}
+.recipe-detail .content-section .text-content a {
+  color: #f44336;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .recipe-detail {
+    flex-direction: column;
+  }
+  .recipe-detail .image-section,
+  .recipe-detail .content-section {
+    width: 100%;
+  }
+}/*# sourceMappingURL=RecipeDetail.css.map */

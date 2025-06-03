@@ -1,46 +1,48 @@
-.search-bar {
+.search-bar-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 2rem auto;
-  max-width: 600px;
+  margin: 1rem 0;
   padding: 0 1rem;
 }
-.search-bar .input-wrapper {
-  position: relative;
-  flex: 1;
-}
-.search-bar .input-wrapper .search-icon {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #888;
-  font-size: 1rem;
-}
-.search-bar .input-wrapper input {
+.search-bar-wrapper .search-input-container {
+  display: flex;
+  align-items: center;
+  background: #2d2d2d;
+  padding: 0.75rem 1rem;
+  border-radius: 50px;
   width: 100%;
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
-  border-radius: 999px;
-  border: 1px solid #ccc;
+  max-width: 600px;
+}
+.search-bar-wrapper .search-input-container .search-icon {
+  color: #fff;
   font-size: 1rem;
-  outline: none;
-  transition: border 0.2s;
+  margin-right: 0.75rem;
 }
-.search-bar .input-wrapper input:focus {
-  border-color: #0077ff;
-}
-.search-bar button {
-  background-color: #0077ff;
-  color: white;
+.search-bar-wrapper .search-input-container input {
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
+  background: transparent;
+  color: #fff;
   font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  width: 100%;
+  outline: none;
 }
-.search-bar button:hover {
-  background-color: #005fcc;
+.search-bar-wrapper .search-input-container input::-moz-placeholder {
+  color: #ccc;
+}
+.search-bar-wrapper .search-input-container input::placeholder {
+  color: #ccc;
+}
+.search-bar-wrapper .search-input-container input:-webkit-autofill, .search-bar-wrapper .search-input-container input:-webkit-autofill:hover, .search-bar-wrapper .search-input-container input:-webkit-autofill:focus {
+  -webkit-transition: background-color 9999s ease-in-out 0s;
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
+@media (max-width: 768px) {
+  .search-bar-wrapper {
+    padding: 0 1rem;
+  }
+  .search-bar-wrapper .search-input-container input {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=SearchBar.css.map */
