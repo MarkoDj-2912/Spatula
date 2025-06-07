@@ -1,9 +1,9 @@
-@import "./RecipeCard.scss";
-@import "./RecipeList.scss";
-@import "./Navbar.scss";
-@import "./VeggieCarousel.scss";
-@import "./TrendingCarousel.scss";
-@import "./Layout.scss";
+@use "./RecipeCard.scss";
+@use "./RecipeList.scss";
+@use "./Navbar.scss";
+@use "./VeggieCarousel.scss";
+@use "./TrendingCarousel.scss";
+@use "./Layout.scss";
 
 $app-bg-color: #f7f3f3a9;
 $card-bg-color: white;
