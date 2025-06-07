@@ -59,6 +59,34 @@
   color: #f44336;
   text-decoration: underline;
 }
+.recipe-detail .title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.recipe-detail .title-row h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.recipe-detail .title-row .fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #f44336;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.recipe-detail .title-row .fav-btn:hover {
+  transform: scale(1.2);
+}
+.recipe-detail .title-row .fav-btn.active {
+  color: #f44336;
+}
+.recipe-detail .loading {
+  padding: 2rem;
+}
 @media (max-width: 768px) {
   .recipe-detail {
     flex-direction: column;

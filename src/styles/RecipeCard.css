@@ -4,12 +4,17 @@
   aspect-ratio: 4/3;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.4s ease forwards;
+  animation-delay: var(--delay, 0ms);
 }
 .recipe-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 .recipe-card .image-wrapper {
   position: relative;
@@ -29,13 +34,14 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
   color: #fff;
   font-family: "Montserrat", sans-serif;
   z-index: 2;
   max-height: 30%;
   box-sizing: border-box;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .recipe-card .image-wrapper .title-overlay h3 {
   margin: 0;
@@ -53,7 +59,7 @@
   background: transparent;
   border: none;
   font-size: 1.4rem;
-  color: white;
+  color: #f44336;
   cursor: pointer;
   z-index: 3;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -61,4 +67,11 @@
 }
 .recipe-card .image-wrapper .fav-btn:hover {
   transform: scale(1.2);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=RecipeCard.css.map */

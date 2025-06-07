@@ -1,0 +1,197 @@
+.auth-wrapper {
+  display: flex;
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  .auth-wrapper {
+    flex-direction: column;
+  }
+}
+.auth-wrapper .auth-image {
+  flex: 1;
+  background: url("/public/login-image.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .auth-wrapper .auth-image {
+    height: 200px;
+    width: 100%;
+  }
+}
+.auth-wrapper .auth-form {
+  flex: 1;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .auth-wrapper .auth-form {
+    padding: 1rem;
+  }
+}
+.auth-wrapper .auth-form .form-container {
+  max-width: 360px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+.auth-wrapper .auth-form .form-container .auth-logo {
+  font-family: "Pacifico", sans-serif;
+  font-size: 2.2rem;
+  color: #f8b400;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left;
+  text-shadow: 0 0 2px rgba(248, 182, 0, 0.9333333333);
+}
+.auth-wrapper .auth-form .form-container .auth-logo:hover {
+  opacity: 0.85;
+}
+.auth-wrapper .auth-form .form-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #f8b400;
+}
+.auth-wrapper .auth-form .form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.auth-wrapper .auth-form .form-container input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.auth-wrapper .auth-form .form-container input:focus {
+  border-color: #f8b400;
+  outline: none;
+}
+.auth-wrapper .auth-form .form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f8b400;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.auth-wrapper .auth-form .form-container button:hover {
+  background-color: #e6a800;
+}
+.auth-wrapper .auth-form .form-container p {
+  text-align: center;
+  margin-top: 1rem;
+}
+.auth-wrapper .auth-form .form-container p a {
+  color: #f8b400;
+  text-decoration: none;
+  font-weight: 500;
+}
+.auth-wrapper .auth-form .form-container p a:hover {
+  text-decoration: underline;
+}
+
+.auth-page {
+  display: flex;
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  .auth-page {
+    flex-direction: column;
+  }
+}
+
+.auth-image {
+  flex: 1;
+  background-image: url("/public/login-image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .auth-image {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+.auth-form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .auth-form-container {
+    padding: 1rem;
+  }
+}
+
+.auth-box {
+  max-width: 360px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+.auth-box .auth-logo {
+  font-family: "Pacifico", sans-serif;
+  font-size: 2.2rem;
+  color: #f8b400;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left;
+  text-shadow: 0 0 2px rgba(248, 182, 0, 0.9333333333);
+}
+.auth-box .auth-logo:hover {
+  opacity: 0.85;
+}
+.auth-box h2 {
+  margin-bottom: 1.5rem;
+  color: #f8b400;
+  text-align: center;
+  font-size: 2rem;
+}
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.auth-box form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.auth-box form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #f8b400;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.auth-box form button:hover {
+  background-color: #d99a00;
+}
+.auth-box p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=Auth.css.map */
