@@ -5,6 +5,7 @@ import "../styles/RecipeCard.scss"; // Import styles for the component
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome for icons
 import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons"; // Solid heart icon for favorite
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons"; // Regular heart icon for non-favorite
+import Swal from "sweetalert2";
 
 // RecipeCard component displays a recipe with an image, title, and favorite button
 const RecipeCard = ({ recipe, style }) => {
@@ -14,11 +15,28 @@ const RecipeCard = ({ recipe, style }) => {
 
   // Toggle favorite status when the heart button is clicked
   const toggleFavorite = (e) => {
-    e.stopPropagation(); // Prevent triggering parent click event
+    e.stopPropagation(); // Prevent click from bubbling to card
+
     if (favorite) {
-      removeFavorite(recipe.id); // Remove from favorites
+      removeFavorite(recipe.id);
+      Swal.fire({
+        title: "Removed from favorites",
+        icon: "info",
+        timer: 1200,
+        showConfirmButton: false,
+        toast: true,
+        position: "top-end",
+      });
     } else {
-      addFavorite(recipe); // Add to favorites
+      addFavorite(recipe);
+      Swal.fire({
+        title: "Added to favorites",
+        icon: "success",
+        timer: 1200,
+        showConfirmButton: false,
+        toast: true,
+        position: "top-end",
+      });
     }
   };
 

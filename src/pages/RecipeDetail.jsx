@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 
+import Swal from "sweetalert2";
+
 // Import styles for the recipe detail page
 import "../styles/RecipeDetail.scss";
 
@@ -25,13 +27,29 @@ const RecipeDetail = () => {
   // Function to toggle favorite status
   const toggleFavorite = () => {
     if (favorite) {
-      removeFavorite(id); // Remove from favorites if already added
+      removeFavorite(id);
+      Swal.fire({
+        title: "Removed from favorites",
+        icon: "info",
+        timer: 1200,
+        showConfirmButton: false,
+        toast: true,
+        position: "top-end",
+      });
     } else {
       addFavorite({
         id: recipe.id,
         title: recipe.title,
         image: recipe.image,
-      }); // Add to favorites
+      });
+      Swal.fire({
+        title: "Added to favorites",
+        icon: "success",
+        timer: 1200,
+        showConfirmButton: false,
+        toast: true,
+        position: "top-end",
+      });
     }
   };
 

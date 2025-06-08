@@ -15,6 +15,7 @@ Spatula is a modern recipe browsing app built with **React** and **Vite**. Users
 - **Spoonacular API**
 - **Lucide React** (icon library)
 - **Swiper** (carousel slider (veggie/trending section))
+- **Sweetalert2** (toast alert - favorites)
 - **Node.js** + **Express** backend for auth
 - **bcryptjs**, **jsonwebtoken**, **CORS**
 
