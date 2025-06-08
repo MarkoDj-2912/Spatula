@@ -4,7 +4,7 @@ import axios from "axios"; // Axios for making API requests
 
 // Import Swiper components for carousel functionality
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -70,11 +70,34 @@ const TrendingCarousel = () => {
     <div className="trending-carousel">
       <h2>Trending Recipes</h2>
       <Swiper
-        modules={[Navigation]} // Enable navigation controls
+        modules={[Navigation, Autoplay]} // Enable navigation controls
         navigation // Show navigation arrows
-        spaceBetween={15} // Set space between slides
-        slidesPerView={5} // Display 5 slides at a time
-        loop={recipes.length > 5} // Enable looping if there are more than 5 recipes
+        spaceBetween={25} // Set space between slides
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={recipes.length > 6} // Enable looping if there are more than 6 recipes
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 2,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+          1280: {
+            slidesPerView: 5,
+          },
+        }}
       >
         {recipes.map((recipe) => (
           <SwiperSlide key={recipe.id}>

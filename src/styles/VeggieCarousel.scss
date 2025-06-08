@@ -1,5 +1,6 @@
 .carousel-section {
-  padding: 0rem 5rem;
+  padding: 0rem 4.5rem;
+  padding-bottom: 2rem;
 
   h2 {
     color: #2d2d2d;
@@ -8,13 +9,20 @@
   }
 
   .swiper {
-    padding-bottom: 2rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: hidden; // Ensure slides are not clipped
+  }
+
+  .swiper-slide {
+    width: auto;
+    max-width: 250px;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    top: 55%;
-    transform: translateY(-55%);
+    top: 60%;
+    transform: translateY(-60%);
     color: #2d2d2d;
     transition: 0.3s ease;
   }
@@ -24,6 +32,7 @@
     color: #f8b40e;
   }
 }
+
 @media (max-width: 768px) {
   .carousel-section,
   .trending-carousel {
@@ -33,19 +42,29 @@
       font-size: 1.2rem;
       text-align: left;
       margin: 1rem 0;
+      padding-left: 1rem;
     }
 
     .swiper {
       padding-bottom: 1rem;
+      overflow: visible;
     }
 
     .swiper-slide {
-      width: 140px !important;
+      flex: 0 0 calc(33.33% - 10px);
+      max-width: calc(33.33% - 10px);
     }
 
     .swiper-button-next,
     .swiper-button-prev {
       display: none;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide {
+    width: 80%;
+    max-width: 80%;
   }
 }

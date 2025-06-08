@@ -1,5 +1,5 @@
 // Import necessary dependencies
-import React, { useState, useEffect } from "react"; // React hooks for state and lifecycle management
+import React, { useState, useEffect, useRef } from "react"; // React hooks for state and lifecycle management
 import { Link, useNavigate } from "react-router-dom"; // Navigation components from React Router
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Icons for dropdown toggles
 import { useAuth } from "../hooks/useAuth"; // Custom authentication hook
