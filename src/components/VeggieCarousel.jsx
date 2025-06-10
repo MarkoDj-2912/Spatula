@@ -100,7 +100,7 @@ const VeggieCarousel = () => {
             slidesPerView: 5,
           },
           1920: {
-            slidePerView: 7,
+            slidePerView: 5,
           },
         }}
       >

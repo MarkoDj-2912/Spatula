@@ -21,7 +21,7 @@ const Navbar = () => {
   // Effect to handle window resizing and update mobile state
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.innerWidth <= 768;
+      const mobile = window.innerWidth <= 1052;
       setIsMobile(mobile);
       if (!mobile) {
         setMenuOpen(false);
