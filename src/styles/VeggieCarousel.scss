@@ -34,8 +34,7 @@
 }
 
 @media (max-width: 768px) {
-  .carousel-section,
-  .trending-carousel {
+  .carousel-section {
     padding: 0 1rem;
 
     h2 {
@@ -47,7 +46,7 @@
 
     .swiper {
       padding-bottom: 1rem;
-      overflow: visible;
+      overflow: hidden;
     }
 
     .swiper-slide {

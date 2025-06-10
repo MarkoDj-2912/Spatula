@@ -77,25 +77,30 @@ const TrendingCarousel = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        loop={recipes.length > 6} // Enable looping if there are more than 6 recipes
+        loop={recipes.length > 8} // Enable looping if there are more than 6 recipes
+        centeredSlides={false}
+        style={{ width: "100%" }}
         breakpoints={{
           0: {
             slidesPerView: 1,
           },
           480: {
-            slidesPerView: 2,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-          768: {
             slidesPerView: 3,
           },
-          1024: {
+          640: {
             slidesPerView: 4,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 5,
           },
           1280: {
             slidesPerView: 5,
+          },
+          1920: {
+            slidePerView: 5,
           },
         }}
       >
