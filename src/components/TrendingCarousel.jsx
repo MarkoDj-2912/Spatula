@@ -45,7 +45,7 @@ const TrendingCarousel = () => {
         try {
           const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY; // Get API key from environment variables
           const response = await axios.get(
-            `https://api.spoonacular.com/recipes/random?number=9&apiKey=${apiKey}`
+            `https://api.spoonacular.com/recipes/random?number=15&apiKey=${apiKey}`
           );
 
           // Filter out recipes that don't have an image
@@ -77,7 +77,7 @@ const TrendingCarousel = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        loop={recipes.length > 8} // Enable looping if there are more than 6 recipes
+        loop={recipes.length > 9} // Enable looping if there are more than 6 recipes
         centeredSlides={false}
         style={{ width: "100%" }}
         breakpoints={{
@@ -97,10 +97,10 @@ const TrendingCarousel = () => {
             slidesPerView: 5,
           },
           1280: {
-            slidesPerView: 5,
+            slidesPerView: 6,
           },
           1920: {
-            slidePerView: 5,
+            slidesPerView: 7,
           },
         }}
       >
