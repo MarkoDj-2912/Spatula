@@ -77,7 +77,7 @@ const TrendingCarousel = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        loop={recipes.length > 9} // Enable looping if there are more than 6 recipes
+        loop={recipes.length > 8} // Enable looping if there are more than 6 recipes
         centeredSlides={false}
         style={{ width: "100%" }}
         breakpoints={{
